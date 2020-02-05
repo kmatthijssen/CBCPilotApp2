@@ -12,6 +12,7 @@
         <TextBlock x:Name="HelloWorld" Text="Hello Beautiful World!" FontSize="20" FontFamily="Tahoma" TextAlignment="Left" VerticalAlignment="Center" HorizontalAlignment="Left"/>
    
         <Button Content="Select File" Click= "Button_Click" HorizontalAlignment="Center"/>
+        
         <TextBlock x:Name="PickedFile" Text="" FontSize="10" FontFamily="Tahoma" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Right"/>
     </Grid>
 </Page>
