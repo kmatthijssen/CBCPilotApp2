@@ -53,7 +53,7 @@ namespace CBCPilotApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //comment to push
+            //comment to push changed min version
             Task result = PickFile();
         }
     }
