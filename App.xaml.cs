@@ -14,9 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 
 
 namespace CBCPilotApp
@@ -32,8 +29,6 @@ namespace CBCPilotApp
         /// </summary>
         public App()
         {
-
-            Microsoft.AppCenter.AppCenter.Start("79bb0f25-530d-45d4-8e82-2fd248533c6f", typeof(Analytics), typeof(Crashes));
 
             this.InitializeComponent();
             this.Suspending += OnSuspending;
