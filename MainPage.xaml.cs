@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Windows.Networking.Connectivity;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.Networking.Connectivity;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -44,8 +33,8 @@ namespace CBCPilotApp
             if (file != null)
             {
                 // Application now has read/write access to the picked file
-                this.PickedFile.Text = "Picked file: " + file.Path +  file.Name;
-                
+                this.PickedFile.Text = "Picked file: " + file.Path + file.Name;
+
                 SetStatusImage(StatusFileUpload, true);
                 return true;
             }
@@ -67,13 +56,13 @@ namespace CBCPilotApp
             if (Success == true)
             {
                 bitmapImage.UriSource = new Uri(img.BaseUri, "/Images/greencheck.png");
-        }
+            }
             else
             {
                 bitmapImage.UriSource = new Uri(img.BaseUri, "/Images/redcross.png");
             }
 
-           
+
 
             sender.Source = bitmapImage;
             sender.Width = 25;
@@ -95,9 +84,9 @@ namespace CBCPilotApp
 
 
         public async Task CheckInternet()
-        { 
-                var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
-                bool HasInternetAccess = (connectionProfile != null && connectionProfile.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess);
+        {
+            var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+            bool HasInternetAccess = (connectionProfile != null && connectionProfile.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess);
             if (HasInternetAccess)
             {
                 textblock_internet.Text = "internet connectivity";

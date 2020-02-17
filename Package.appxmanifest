@@ -9,12 +9,12 @@
   <Identity
     Name="YouSource.YouSourceisAwesome"
     Publisher="CN=B1F62325-F3B6-4D3B-A897-5D9EDFC34211"
-    Version="1.0.10.0" />
+    Version="1.0.20.0" />
 
   <mp:PhoneIdentity PhoneProductId="12c3c3d2-3393-4bb2-bbef-14c74f7f1086" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>YouSource is Awesome</DisplayName>
+    <DisplayName>You_Source Corporate Tester</DisplayName>
     <PublisherDisplayName>You_Source</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -32,10 +32,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="CBCPilotApp.App">
       <uap:VisualElements
-        DisplayName="YouSource is Awesome"
+        DisplayName="You_Source Corporate Tester"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="CBCPilotApp First Hello World app to test the proces to use the windows store"
+        Description="You_Source application to test access for corporates"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
@@ -46,5 +46,7 @@
   </Applications>
 
   <Capabilities>
+    <Capability Name="internetClient"/>
+    <Capability Name="internetClientServer"/>
     <DeviceCapability Name="location"/></Capabilities>
 </Package>
